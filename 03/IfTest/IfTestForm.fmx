@@ -1,0 +1,70 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 567
+  ClientWidth = 384
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 3
+  object Memo1: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    Align = Client
+    Size.Width = 384.000000000000000000
+    Size.Height = 380.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    Viewport.Width = 376.000000000000000000
+    Viewport.Height = 372.000000000000000000
+  end
+  object Button1: TButton
+    Align = Top
+    Size.Width = 384.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    Text = 'if-then'
+    OnClick = Button1Click
+  end
+  object CheckBox1: TCheckBox
+    Align = Top
+    Position.Y = 44.000000000000000000
+    Size.Width = 384.000000000000000000
+    Size.Height = 23.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    Text = 'CheckBox1'
+  end
+  object Button2: TButton
+    Align = Top
+    Position.Y = 67.000000000000000000
+    Size.Width = 384.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    Text = 'if-then-else'
+    OnClick = Button2Click
+  end
+  object Edit1: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Align = Top
+    TabOrder = 4
+    Text = 'hello'
+    Position.Y = 111.000000000000000000
+    Size.Width = 384.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object Button3: TButton
+    Align = Top
+    Position.Y = 143.000000000000000000
+    Size.Width = 384.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 5
+    Text = 'nested if'
+    OnClick = Button3Click
+  end
+end

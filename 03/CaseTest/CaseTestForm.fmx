@@ -1,0 +1,61 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 567
+  ClientWidth = 384
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 3
+  object Memo1: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    Align = Client
+    Size.Width = 384.000000000000000000
+    Size.Height = 415.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    Viewport.Width = 376.000000000000000000
+    Viewport.Height = 407.000000000000000000
+  end
+  object Button1: TButton
+    Align = Top
+    Position.Y = 32.000000000000000000
+    Size.Width = 384.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    Text = 'case number'
+    OnClick = Button1Click
+  end
+  object Edit1: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Align = Top
+    TabOrder = 2
+    Text = 'hello'
+    Position.Y = 76.000000000000000000
+    Size.Width = 384.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object Button3: TButton
+    Align = Top
+    Position.Y = 108.000000000000000000
+    Size.Width = 384.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    Text = 'case char'
+    OnClick = Button3Click
+  end
+  object NumberBox1: TNumberBox
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Align = Top
+    TabOrder = 4
+    Cursor = crIBeam
+    Size.Width = 384.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+  end
+end

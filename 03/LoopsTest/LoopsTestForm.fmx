@@ -1,0 +1,71 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 567
+  ClientWidth = 384
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 3
+  object Memo1: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    Align = Client
+    Size.Width = 384.000000000000000000
+    Size.Height = 347.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    Viewport.Width = 376.000000000000000000
+    Viewport.Height = 339.000000000000000000
+  end
+  object Button1: TButton
+    Align = Top
+    Size.Width = 384.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    Text = 'for sequence'
+    OnClick = Button1Click
+  end
+  object Button2: TButton
+    Align = Top
+    Position.Y = 44.000000000000000000
+    Size.Width = 384.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    Text = 'while sequence'
+    OnClick = Button2Click
+  end
+  object Button3: TButton
+    Align = Top
+    Position.Y = 88.000000000000000000
+    Size.Width = 384.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    Text = 'while random'
+    OnClick = Button3Click
+  end
+  object Button4: TButton
+    Align = Top
+    Position.Y = 132.000000000000000000
+    Size.Width = 384.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    Text = 'for-in'
+    OnClick = Button4Click
+  end
+  object Button5: TButton
+    Align = Top
+    Position.Y = 176.000000000000000000
+    Size.Width = 384.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 5
+    Text = 'for-in speed'
+    OnClick = Button5Click
+  end
+end
