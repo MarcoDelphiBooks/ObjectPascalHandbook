@@ -1,0 +1,132 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{4F3812F7-D096-4D18-B088-654BE97AA70B}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="CharTest\CharTest.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="CodePoints\CodePoints.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="EncodingsTest\EncodingsTest.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="FormatString\FormatString.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="LargeString\LargeString.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ShowUnicode\ShowUnicode.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="StringHelperTest\StringHelperTest.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="StringMetaTest\StringMetaTest.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Strings101\Strings101.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="CharTest">
+        <MSBuild Projects="CharTest\CharTest.dproj"/>
+    </Target>
+    <Target Name="CharTest:Clean">
+        <MSBuild Projects="CharTest\CharTest.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="CharTest:Make">
+        <MSBuild Projects="CharTest\CharTest.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="CodePoints">
+        <MSBuild Projects="CodePoints\CodePoints.dproj"/>
+    </Target>
+    <Target Name="CodePoints:Clean">
+        <MSBuild Projects="CodePoints\CodePoints.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="CodePoints:Make">
+        <MSBuild Projects="CodePoints\CodePoints.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="EncodingsTest">
+        <MSBuild Projects="EncodingsTest\EncodingsTest.dproj"/>
+    </Target>
+    <Target Name="EncodingsTest:Clean">
+        <MSBuild Projects="EncodingsTest\EncodingsTest.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="EncodingsTest:Make">
+        <MSBuild Projects="EncodingsTest\EncodingsTest.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="FormatString">
+        <MSBuild Projects="FormatString\FormatString.dproj"/>
+    </Target>
+    <Target Name="FormatString:Clean">
+        <MSBuild Projects="FormatString\FormatString.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="FormatString:Make">
+        <MSBuild Projects="FormatString\FormatString.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="LargeString">
+        <MSBuild Projects="LargeString\LargeString.dproj"/>
+    </Target>
+    <Target Name="LargeString:Clean">
+        <MSBuild Projects="LargeString\LargeString.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="LargeString:Make">
+        <MSBuild Projects="LargeString\LargeString.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ShowUnicode">
+        <MSBuild Projects="ShowUnicode\ShowUnicode.dproj"/>
+    </Target>
+    <Target Name="ShowUnicode:Clean">
+        <MSBuild Projects="ShowUnicode\ShowUnicode.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ShowUnicode:Make">
+        <MSBuild Projects="ShowUnicode\ShowUnicode.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="StringHelperTest">
+        <MSBuild Projects="StringHelperTest\StringHelperTest.dproj"/>
+    </Target>
+    <Target Name="StringHelperTest:Clean">
+        <MSBuild Projects="StringHelperTest\StringHelperTest.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="StringHelperTest:Make">
+        <MSBuild Projects="StringHelperTest\StringHelperTest.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="StringMetaTest">
+        <MSBuild Projects="StringMetaTest\StringMetaTest.dproj"/>
+    </Target>
+    <Target Name="StringMetaTest:Clean">
+        <MSBuild Projects="StringMetaTest\StringMetaTest.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="StringMetaTest:Make">
+        <MSBuild Projects="StringMetaTest\StringMetaTest.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Strings101">
+        <MSBuild Projects="Strings101\Strings101.dproj"/>
+    </Target>
+    <Target Name="Strings101:Clean">
+        <MSBuild Projects="Strings101\Strings101.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Strings101:Make">
+        <MSBuild Projects="Strings101\Strings101.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="CharTest;CodePoints;EncodingsTest;FormatString;LargeString;ShowUnicode;StringHelperTest;StringMetaTest;Strings101"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="CharTest:Clean;CodePoints:Clean;EncodingsTest:Clean;FormatString:Clean;LargeString:Clean;ShowUnicode:Clean;StringHelperTest:Clean;StringMetaTest:Clean;Strings101:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="CharTest:Make;CodePoints:Make;EncodingsTest:Make;FormatString:Make;LargeString:Make;ShowUnicode:Make;StringHelperTest:Make;StringMetaTest:Make;Strings101:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

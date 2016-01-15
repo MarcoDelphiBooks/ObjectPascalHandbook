@@ -1,0 +1,225 @@
+object Form2: TForm2
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 567
+  ClientWidth = 384
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 3
+  object ToolBar1: TToolBar
+    Size.Width = 384.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object BackBtn: TSpeedButton
+      Align = Right
+      Position.X = 320.000000000000000000
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'backtoolbutton'
+      Text = 'Back'
+      Visible = False
+      OnClick = BackBtnClick
+    end
+    object Label1: TLabel
+      Align = Client
+      Size.Width = 384.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.HorzAlign = Center
+      Text = 'Unicode'
+    end
+  end
+  object StatusBar1: TStatusBar
+    Position.Y = 536.000000000000000000
+    ShowSizeGrip = True
+    Size.Width = 384.000000000000000000
+    Size.Height = 31.000000000000000000
+    Size.PlatformDefault = False
+    object Label2: TLabel
+      Align = Client
+      Size.Width = 384.000000000000000000
+      Size.Height = 31.000000000000000000
+      Size.PlatformDefault = False
+    end
+  end
+  object TabControl1: TTabControl
+    Align = Client
+    FullSize = True
+    Size.Width = 384.000000000000000000
+    Size.Height = 488.000000000000000000
+    Size.PlatformDefault = False
+    TabHeight = 49.000000000000000000
+    TabIndex = 0
+    TabOrder = 2
+    TabPosition = None
+    object TabItem1: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = True
+      Size.Width = 8.000000000000000000
+      Size.Height = 8.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'TabItem1'
+      ExplicitSize.cx = 50.000000000000000000
+      ExplicitSize.cy = 50.000000000000000000
+      object ListView1: TListView
+        ItemAppearanceClassName = 'TListItemAppearance'
+        ItemEditAppearanceClassName = 'TListItemShowCheckAppearance'
+        HeaderAppearanceClassName = 'TListHeaderObjects'
+        FooterAppearanceClassName = 'TListHeaderObjects'
+        Align = Client
+        Size.Width = 384.000000000000000000
+        Size.Height = 488.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        OnItemClick = ListView1ItemClick
+      end
+    end
+    object TabItem2: TTabItem
+      CustomIcon = <
+        item
+        end>
+      TextSettings.Font.Family = 'Calibri'
+      StyledSettings = [Size, Style, FontColor]
+      IsSelected = False
+      Size.Width = 8.000000000000000000
+      Size.Height = 8.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'TabItem2'
+      ExplicitSize.cx = 50.000000000000000000
+      ExplicitSize.cy = 50.000000000000000000
+      object StringGrid1: TStringGrid
+        Align = Client
+        Size.Width = 50.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        RowCount = 16
+        RowHeight = 28.000000000000000000
+        Viewport.Width = 45.000000000000000000
+        Viewport.Height = 13.000000000000000000
+        object StringColumn1: TStringColumn
+          Size.Width = 22.000000000000000000
+          Size.Height = 28.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+        end
+        object StringColumn2: TStringColumn
+          Position.X = 22.000000000000000000
+          Size.Width = 22.000000000000000000
+          Size.Height = 28.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+        end
+        object StringColumn3: TStringColumn
+          Position.X = 44.000000000000000000
+          Size.Width = 22.000000000000000000
+          Size.Height = 28.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+        end
+        object StringColumn4: TStringColumn
+          Position.X = 66.000000000000000000
+          Size.Width = 22.000000000000000000
+          Size.Height = 28.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 3
+        end
+        object StringColumn5: TStringColumn
+          Position.X = 88.000000000000000000
+          Size.Width = 22.000000000000000000
+          Size.Height = 28.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 4
+        end
+        object StringColumn6: TStringColumn
+          Position.X = 110.000000000000000000
+          Size.Width = 22.000000000000000000
+          Size.Height = 28.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 5
+        end
+        object StringColumn7: TStringColumn
+          Position.X = 132.000000000000000000
+          Size.Width = 22.000000000000000000
+          Size.Height = 28.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 6
+        end
+        object StringColumn8: TStringColumn
+          Position.X = 154.000000000000000000
+          Size.Width = 22.000000000000000000
+          Size.Height = 28.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 7
+        end
+        object StringColumn9: TStringColumn
+          Position.X = 176.000000000000000000
+          Size.Width = 22.000000000000000000
+          Size.Height = 28.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 8
+        end
+        object StringColumn10: TStringColumn
+          Position.X = 198.000000000000000000
+          Size.Width = 22.000000000000000000
+          Size.Height = 28.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 9
+        end
+        object StringColumn11: TStringColumn
+          Position.X = 220.000000000000000000
+          Size.Width = 22.000000000000000000
+          Size.Height = 28.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 10
+        end
+        object StringColumn12: TStringColumn
+          Position.X = 242.000000000000000000
+          Size.Width = 22.000000000000000000
+          Size.Height = 28.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 11
+        end
+        object StringColumn13: TStringColumn
+          Position.X = 264.000000000000000000
+          Size.Width = 22.000000000000000000
+          Size.Height = 28.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 12
+        end
+        object StringColumn14: TStringColumn
+          Position.X = 286.000000000000000000
+          Size.Width = 22.000000000000000000
+          Size.Height = 28.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 13
+        end
+        object StringColumn15: TStringColumn
+          Position.X = 308.000000000000000000
+          Size.Width = 22.000000000000000000
+          Size.Height = 28.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 14
+        end
+        object StringColumn16: TStringColumn
+          Position.X = 330.000000000000000000
+          Size.Width = 22.000000000000000000
+          Size.Height = 28.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 15
+        end
+      end
+    end
+  end
+end
