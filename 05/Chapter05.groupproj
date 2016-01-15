@@ -1,0 +1,156 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{42D4E85D-759E-4E9A-8A42-BED9564C2BAC}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="D:\Marco\code\CanTools\cantools_100.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="AlignTest\AlignTest.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ArraysTest\ArraysTest.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="DynArray\DynArray.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="OpenArray\OpenArray.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="OperatorsOver\OperatorsOver.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="PointersTest\PointersTest.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="RecordMethods\RecordMethods.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="RecordsTest\RecordsTest.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="RecordsWith\RecordsWith.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="VariantTest\VariantTest.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="cantools_100">
+        <MSBuild Projects="D:\Marco\code\CanTools\cantools_100.dproj"/>
+    </Target>
+    <Target Name="cantools_100:Clean">
+        <MSBuild Projects="D:\Marco\code\CanTools\cantools_100.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="cantools_100:Make">
+        <MSBuild Projects="D:\Marco\code\CanTools\cantools_100.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="AlignTest">
+        <MSBuild Projects="AlignTest\AlignTest.dproj"/>
+    </Target>
+    <Target Name="AlignTest:Clean">
+        <MSBuild Projects="AlignTest\AlignTest.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="AlignTest:Make">
+        <MSBuild Projects="AlignTest\AlignTest.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ArraysTest">
+        <MSBuild Projects="ArraysTest\ArraysTest.dproj"/>
+    </Target>
+    <Target Name="ArraysTest:Clean">
+        <MSBuild Projects="ArraysTest\ArraysTest.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ArraysTest:Make">
+        <MSBuild Projects="ArraysTest\ArraysTest.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="DynArray">
+        <MSBuild Projects="DynArray\DynArray.dproj"/>
+    </Target>
+    <Target Name="DynArray:Clean">
+        <MSBuild Projects="DynArray\DynArray.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DynArray:Make">
+        <MSBuild Projects="DynArray\DynArray.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="OpenArray">
+        <MSBuild Projects="OpenArray\OpenArray.dproj"/>
+    </Target>
+    <Target Name="OpenArray:Clean">
+        <MSBuild Projects="OpenArray\OpenArray.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="OpenArray:Make">
+        <MSBuild Projects="OpenArray\OpenArray.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="OperatorsOver">
+        <MSBuild Projects="OperatorsOver\OperatorsOver.dproj"/>
+    </Target>
+    <Target Name="OperatorsOver:Clean">
+        <MSBuild Projects="OperatorsOver\OperatorsOver.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="OperatorsOver:Make">
+        <MSBuild Projects="OperatorsOver\OperatorsOver.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PointersTest">
+        <MSBuild Projects="PointersTest\PointersTest.dproj"/>
+    </Target>
+    <Target Name="PointersTest:Clean">
+        <MSBuild Projects="PointersTest\PointersTest.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PointersTest:Make">
+        <MSBuild Projects="PointersTest\PointersTest.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="RecordMethods">
+        <MSBuild Projects="RecordMethods\RecordMethods.dproj"/>
+    </Target>
+    <Target Name="RecordMethods:Clean">
+        <MSBuild Projects="RecordMethods\RecordMethods.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="RecordMethods:Make">
+        <MSBuild Projects="RecordMethods\RecordMethods.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="RecordsTest">
+        <MSBuild Projects="RecordsTest\RecordsTest.dproj"/>
+    </Target>
+    <Target Name="RecordsTest:Clean">
+        <MSBuild Projects="RecordsTest\RecordsTest.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="RecordsTest:Make">
+        <MSBuild Projects="RecordsTest\RecordsTest.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="RecordsWith">
+        <MSBuild Projects="RecordsWith\RecordsWith.dproj"/>
+    </Target>
+    <Target Name="RecordsWith:Clean">
+        <MSBuild Projects="RecordsWith\RecordsWith.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="RecordsWith:Make">
+        <MSBuild Projects="RecordsWith\RecordsWith.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="VariantTest">
+        <MSBuild Projects="VariantTest\VariantTest.dproj"/>
+    </Target>
+    <Target Name="VariantTest:Clean">
+        <MSBuild Projects="VariantTest\VariantTest.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="VariantTest:Make">
+        <MSBuild Projects="VariantTest\VariantTest.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="cantools_100;AlignTest;ArraysTest;DynArray;OpenArray;OperatorsOver;PointersTest;RecordMethods;RecordsTest;RecordsWith;VariantTest"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="cantools_100:Clean;AlignTest:Clean;ArraysTest:Clean;DynArray:Clean;OpenArray:Clean;OperatorsOver:Clean;PointersTest:Clean;RecordMethods:Clean;RecordsTest:Clean;RecordsWith:Clean;VariantTest:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="cantools_100:Make;AlignTest:Make;ArraysTest:Make;DynArray:Make;OpenArray:Make;OperatorsOver:Make;PointersTest:Make;RecordMethods:Make;RecordsTest:Make;RecordsWith:Make;VariantTest:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
