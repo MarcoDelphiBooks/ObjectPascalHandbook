@@ -1,0 +1,96 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{F24D0F9A-7B06-43E6-BA93-89A013AEC718}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="CharsTest\CharsTest.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ExpressionsTest\ExpressionsTest.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="FloatTest\FloatTest.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="IntegersTest\IntegersTest.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="TimeNow\TimeNow.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="VariablesTest\VariablesTest.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="CharsTest">
+        <MSBuild Projects="CharsTest\CharsTest.dproj"/>
+    </Target>
+    <Target Name="CharsTest:Clean">
+        <MSBuild Projects="CharsTest\CharsTest.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="CharsTest:Make">
+        <MSBuild Projects="CharsTest\CharsTest.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ExpressionsTest">
+        <MSBuild Projects="ExpressionsTest\ExpressionsTest.dproj"/>
+    </Target>
+    <Target Name="ExpressionsTest:Clean">
+        <MSBuild Projects="ExpressionsTest\ExpressionsTest.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ExpressionsTest:Make">
+        <MSBuild Projects="ExpressionsTest\ExpressionsTest.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="FloatTest">
+        <MSBuild Projects="FloatTest\FloatTest.dproj"/>
+    </Target>
+    <Target Name="FloatTest:Clean">
+        <MSBuild Projects="FloatTest\FloatTest.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="FloatTest:Make">
+        <MSBuild Projects="FloatTest\FloatTest.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="IntegersTest">
+        <MSBuild Projects="IntegersTest\IntegersTest.dproj"/>
+    </Target>
+    <Target Name="IntegersTest:Clean">
+        <MSBuild Projects="IntegersTest\IntegersTest.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="IntegersTest:Make">
+        <MSBuild Projects="IntegersTest\IntegersTest.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="TimeNow">
+        <MSBuild Projects="TimeNow\TimeNow.dproj"/>
+    </Target>
+    <Target Name="TimeNow:Clean">
+        <MSBuild Projects="TimeNow\TimeNow.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TimeNow:Make">
+        <MSBuild Projects="TimeNow\TimeNow.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="VariablesTest">
+        <MSBuild Projects="VariablesTest\VariablesTest.dproj"/>
+    </Target>
+    <Target Name="VariablesTest:Clean">
+        <MSBuild Projects="VariablesTest\VariablesTest.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="VariablesTest:Make">
+        <MSBuild Projects="VariablesTest\VariablesTest.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="CharsTest;ExpressionsTest;FloatTest;IntegersTest;TimeNow;VariablesTest"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="CharsTest:Clean;ExpressionsTest:Clean;FloatTest:Clean;IntegersTest:Clean;TimeNow:Clean;VariablesTest:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="CharsTest:Make;ExpressionsTest:Make;FloatTest:Make;IntegersTest:Make;TimeNow:Make;VariablesTest:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

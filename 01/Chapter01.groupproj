@@ -1,0 +1,72 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{577D1D04-193C-42F4-AC5C-F591A6FE45CF}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="HelloConsole\HelloConsole.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="HelloPlatform\HelloPlatform.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="HelloVisual\HelloVisual.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="IdentifiersTest\IdentifiersTest.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="HelloConsole">
+        <MSBuild Projects="HelloConsole\HelloConsole.dproj"/>
+    </Target>
+    <Target Name="HelloConsole:Clean">
+        <MSBuild Projects="HelloConsole\HelloConsole.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="HelloConsole:Make">
+        <MSBuild Projects="HelloConsole\HelloConsole.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="HelloPlatform">
+        <MSBuild Projects="HelloPlatform\HelloPlatform.dproj"/>
+    </Target>
+    <Target Name="HelloPlatform:Clean">
+        <MSBuild Projects="HelloPlatform\HelloPlatform.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="HelloPlatform:Make">
+        <MSBuild Projects="HelloPlatform\HelloPlatform.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="HelloVisual">
+        <MSBuild Projects="HelloVisual\HelloVisual.dproj"/>
+    </Target>
+    <Target Name="HelloVisual:Clean">
+        <MSBuild Projects="HelloVisual\HelloVisual.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="HelloVisual:Make">
+        <MSBuild Projects="HelloVisual\HelloVisual.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="IdentifiersTest">
+        <MSBuild Projects="IdentifiersTest\IdentifiersTest.dproj"/>
+    </Target>
+    <Target Name="IdentifiersTest:Clean">
+        <MSBuild Projects="IdentifiersTest\IdentifiersTest.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="IdentifiersTest:Make">
+        <MSBuild Projects="IdentifiersTest\IdentifiersTest.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="HelloConsole;HelloPlatform;HelloVisual;IdentifiersTest"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="HelloConsole:Clean;HelloPlatform:Clean;HelloVisual:Clean;IdentifiersTest:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="HelloConsole:Make;HelloPlatform:Make;HelloVisual:Make;IdentifiersTest:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

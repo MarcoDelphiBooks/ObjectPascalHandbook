@@ -1,0 +1,84 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{EA6D5784-8566-4E9A-9152-D07C6CBA148D}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="FunctionTest\FunctionTest.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="InliningTest\InliningTest.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="OverloadTest\OverloadTest.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ParamsTest\ParamsTest.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ProcType\ProcType.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="FunctionTest">
+        <MSBuild Projects="FunctionTest\FunctionTest.dproj"/>
+    </Target>
+    <Target Name="FunctionTest:Clean">
+        <MSBuild Projects="FunctionTest\FunctionTest.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="FunctionTest:Make">
+        <MSBuild Projects="FunctionTest\FunctionTest.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="InliningTest">
+        <MSBuild Projects="InliningTest\InliningTest.dproj"/>
+    </Target>
+    <Target Name="InliningTest:Clean">
+        <MSBuild Projects="InliningTest\InliningTest.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="InliningTest:Make">
+        <MSBuild Projects="InliningTest\InliningTest.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="OverloadTest">
+        <MSBuild Projects="OverloadTest\OverloadTest.dproj"/>
+    </Target>
+    <Target Name="OverloadTest:Clean">
+        <MSBuild Projects="OverloadTest\OverloadTest.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="OverloadTest:Make">
+        <MSBuild Projects="OverloadTest\OverloadTest.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ParamsTest">
+        <MSBuild Projects="ParamsTest\ParamsTest.dproj"/>
+    </Target>
+    <Target Name="ParamsTest:Clean">
+        <MSBuild Projects="ParamsTest\ParamsTest.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ParamsTest:Make">
+        <MSBuild Projects="ParamsTest\ParamsTest.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ProcType">
+        <MSBuild Projects="ProcType\ProcType.dproj"/>
+    </Target>
+    <Target Name="ProcType:Clean">
+        <MSBuild Projects="ProcType\ProcType.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ProcType:Make">
+        <MSBuild Projects="ProcType\ProcType.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="FunctionTest;InliningTest;OverloadTest;ParamsTest;ProcType"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="FunctionTest:Clean;InliningTest:Clean;OverloadTest:Clean;ParamsTest:Clean;ProcType:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="FunctionTest:Make;InliningTest:Make;OverloadTest:Make;ParamsTest:Make;ProcType:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

@@ -1,0 +1,84 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{6D28293E-E096-405E-8AC6-DA2E169551A4}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="CaseTest\CaseTest.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="FlowTest\FlowTest.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ForTest\ForTest.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="IfTest\IfTest.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="LoopsTest\LoopsTest.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="CaseTest">
+        <MSBuild Projects="CaseTest\CaseTest.dproj"/>
+    </Target>
+    <Target Name="CaseTest:Clean">
+        <MSBuild Projects="CaseTest\CaseTest.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="CaseTest:Make">
+        <MSBuild Projects="CaseTest\CaseTest.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="FlowTest">
+        <MSBuild Projects="FlowTest\FlowTest.dproj"/>
+    </Target>
+    <Target Name="FlowTest:Clean">
+        <MSBuild Projects="FlowTest\FlowTest.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="FlowTest:Make">
+        <MSBuild Projects="FlowTest\FlowTest.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ForTest">
+        <MSBuild Projects="ForTest\ForTest.dproj"/>
+    </Target>
+    <Target Name="ForTest:Clean">
+        <MSBuild Projects="ForTest\ForTest.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ForTest:Make">
+        <MSBuild Projects="ForTest\ForTest.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="IfTest">
+        <MSBuild Projects="IfTest\IfTest.dproj"/>
+    </Target>
+    <Target Name="IfTest:Clean">
+        <MSBuild Projects="IfTest\IfTest.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="IfTest:Make">
+        <MSBuild Projects="IfTest\IfTest.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="LoopsTest">
+        <MSBuild Projects="LoopsTest\LoopsTest.dproj"/>
+    </Target>
+    <Target Name="LoopsTest:Clean">
+        <MSBuild Projects="LoopsTest\LoopsTest.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="LoopsTest:Make">
+        <MSBuild Projects="LoopsTest\LoopsTest.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="CaseTest;FlowTest;ForTest;IfTest;LoopsTest"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="CaseTest:Clean;FlowTest:Clean;ForTest:Clean;IfTest:Clean;LoopsTest:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="CaseTest:Make;FlowTest:Make;ForTest:Make;IfTest:Make;LoopsTest:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
