@@ -1,0 +1,29 @@
+object FormProp: TFormProp
+  Left = 0
+  Top = 0
+  Caption = 'FormProp'
+  ClientHeight = 480
+  ClientWidth = 312
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop, iPhone]
+  OnMouseDown = FormMouseDown
+  DesignerMasterStyle = 3
+  object ToolBarStatus: TToolBar
+    Align = Bottom
+    Position.Y = 432.000000000000000000
+    Size.Width = 312.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object LabelStatus: TLabel
+      Align = Client
+      Margins.Left = 20.000000000000000000
+      Margins.Right = 20.000000000000000000
+      Size.Width = 272.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Status'
+    end
+  end
+end

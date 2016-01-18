@@ -1,0 +1,96 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{809C9AD5-85CF-4193-89F3-B9C34C54D514}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="AdvancedExcept\AdvancedExcept.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ConstructorExcept\ConstructorExcept.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ErrorLog\ErrorLog.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ExceptionFinally\ExceptFinally.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ExceptionFlow\ExceptionFlow.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ExceptionTest\ExceptionTest.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="AdvancedExcept">
+        <MSBuild Projects="AdvancedExcept\AdvancedExcept.dproj"/>
+    </Target>
+    <Target Name="AdvancedExcept:Clean">
+        <MSBuild Projects="AdvancedExcept\AdvancedExcept.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="AdvancedExcept:Make">
+        <MSBuild Projects="AdvancedExcept\AdvancedExcept.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ConstructorExcept">
+        <MSBuild Projects="ConstructorExcept\ConstructorExcept.dproj"/>
+    </Target>
+    <Target Name="ConstructorExcept:Clean">
+        <MSBuild Projects="ConstructorExcept\ConstructorExcept.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ConstructorExcept:Make">
+        <MSBuild Projects="ConstructorExcept\ConstructorExcept.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ErrorLog">
+        <MSBuild Projects="ErrorLog\ErrorLog.dproj"/>
+    </Target>
+    <Target Name="ErrorLog:Clean">
+        <MSBuild Projects="ErrorLog\ErrorLog.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ErrorLog:Make">
+        <MSBuild Projects="ErrorLog\ErrorLog.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ExceptFinally">
+        <MSBuild Projects="ExceptionFinally\ExceptFinally.dproj"/>
+    </Target>
+    <Target Name="ExceptFinally:Clean">
+        <MSBuild Projects="ExceptionFinally\ExceptFinally.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ExceptFinally:Make">
+        <MSBuild Projects="ExceptionFinally\ExceptFinally.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ExceptionFlow">
+        <MSBuild Projects="ExceptionFlow\ExceptionFlow.dproj"/>
+    </Target>
+    <Target Name="ExceptionFlow:Clean">
+        <MSBuild Projects="ExceptionFlow\ExceptionFlow.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ExceptionFlow:Make">
+        <MSBuild Projects="ExceptionFlow\ExceptionFlow.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ExceptionTest">
+        <MSBuild Projects="ExceptionTest\ExceptionTest.dproj"/>
+    </Target>
+    <Target Name="ExceptionTest:Clean">
+        <MSBuild Projects="ExceptionTest\ExceptionTest.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ExceptionTest:Make">
+        <MSBuild Projects="ExceptionTest\ExceptionTest.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="AdvancedExcept;ConstructorExcept;ErrorLog;ExceptFinally;ExceptionFlow;ExceptionTest"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="AdvancedExcept:Clean;ConstructorExcept:Clean;ErrorLog:Clean;ExceptFinally:Clean;ExceptionFlow:Clean;ExceptionTest:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="AdvancedExcept:Make;ConstructorExcept:Make;ErrorLog:Make;ExceptFinally:Make;ExceptionFlow:Make;ExceptionTest:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

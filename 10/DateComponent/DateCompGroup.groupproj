@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{A6B3BD6E-BFAE-4D80-9283-750458B25AD1}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="DatePackage.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="DateCompTest.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="DatePackage">
+        <MSBuild Projects="DatePackage.dproj"/>
+    </Target>
+    <Target Name="DatePackage:Clean">
+        <MSBuild Projects="DatePackage.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DatePackage:Make">
+        <MSBuild Projects="DatePackage.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="DateCompTest">
+        <MSBuild Projects="DateCompTest.dproj"/>
+    </Target>
+    <Target Name="DateCompTest:Clean">
+        <MSBuild Projects="DateCompTest.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DateCompTest:Make">
+        <MSBuild Projects="DateCompTest.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="DatePackage;DateCompTest"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="DatePackage:Clean;DateCompTest:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="DatePackage:Make;DateCompTest:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

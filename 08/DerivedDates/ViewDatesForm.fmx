@@ -1,0 +1,94 @@
+object DateForm: TDateForm
+  Left = 0
+  Top = 0
+  Caption = 'ViewDate'
+  ClientHeight = 567
+  ClientWidth = 384
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  DesignerMasterStyle = 3
+  object Memo1: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    Align = Client
+    Size.Width = 384.000000000000000000
+    Size.Height = 214.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    Viewport.Width = 376.000000000000000000
+    Viewport.Height = 206.000000000000000000
+  end
+  object btnToday: TButton
+    Align = Top
+    Position.Y = 89.000000000000000000
+    Size.Width = 384.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    Text = 'Today'
+    OnClick = btnTodayClick
+  end
+  object btnIncrease: TButton
+    Align = Top
+    Position.Y = 133.000000000000000000
+    Size.Width = 384.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    Text = 'Increase'
+    OnClick = btnIncreaseClick
+  end
+  object btnDecrease: TButton
+    Align = Top
+    Position.Y = 177.000000000000000000
+    Size.Width = 384.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    Text = 'Decrease'
+    OnClick = btnDecreaseClick
+  end
+  object LabelDate: TLabel
+    Align = Top
+    StyledSettings = [Family, Style, FontColor]
+    Size.Width = 384.000000000000000000
+    Size.Height = 89.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 22.000000000000000000
+    TextSettings.HorzAlign = Center
+    Text = 'LabelDate'
+  end
+  object btnAdd10: TButton
+    Align = Top
+    Position.Y = 221.000000000000000000
+    Size.Width = 384.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 5
+    Text = 'Add 10'
+    OnClick = btnAdd10Click
+  end
+  object btnSubtract10: TButton
+    Align = Top
+    Position.Y = 265.000000000000000000
+    Size.Width = 384.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 6
+    Text = 'Substract 10'
+    OnClick = btnSubtract10Click
+  end
+  object btnLeapyear: TButton
+    Align = Top
+    Position.Y = 309.000000000000000000
+    Size.Width = 384.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 7
+    Text = 'Is Leap year?'
+    OnClick = btnLeapyearClick
+  end
+end

@@ -1,0 +1,108 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{BA59F0DC-515E-4C58-A0FA-8C14D08D55A8}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="AutoRTTI\AutoRTTI.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="DateComponent\DateCompTest.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="DateComponent\DatePackage.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="DynamicEvents\DynamicEvents.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="FormProperties\FormProperties.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="NumbersEnumerator\NumbersEnumerator.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="VarProp\VarProp.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="AutoRTTI">
+        <MSBuild Projects="AutoRTTI\AutoRTTI.dproj"/>
+    </Target>
+    <Target Name="AutoRTTI:Clean">
+        <MSBuild Projects="AutoRTTI\AutoRTTI.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="AutoRTTI:Make">
+        <MSBuild Projects="AutoRTTI\AutoRTTI.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="DateCompTest">
+        <MSBuild Projects="DateComponent\DateCompTest.dproj"/>
+    </Target>
+    <Target Name="DateCompTest:Clean">
+        <MSBuild Projects="DateComponent\DateCompTest.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DateCompTest:Make">
+        <MSBuild Projects="DateComponent\DateCompTest.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="DatePackage">
+        <MSBuild Projects="DateComponent\DatePackage.dproj"/>
+    </Target>
+    <Target Name="DatePackage:Clean">
+        <MSBuild Projects="DateComponent\DatePackage.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DatePackage:Make">
+        <MSBuild Projects="DateComponent\DatePackage.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="DynamicEvents">
+        <MSBuild Projects="DynamicEvents\DynamicEvents.dproj"/>
+    </Target>
+    <Target Name="DynamicEvents:Clean">
+        <MSBuild Projects="DynamicEvents\DynamicEvents.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DynamicEvents:Make">
+        <MSBuild Projects="DynamicEvents\DynamicEvents.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="FormProperties">
+        <MSBuild Projects="FormProperties\FormProperties.dproj"/>
+    </Target>
+    <Target Name="FormProperties:Clean">
+        <MSBuild Projects="FormProperties\FormProperties.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="FormProperties:Make">
+        <MSBuild Projects="FormProperties\FormProperties.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="NumbersEnumerator">
+        <MSBuild Projects="NumbersEnumerator\NumbersEnumerator.dproj"/>
+    </Target>
+    <Target Name="NumbersEnumerator:Clean">
+        <MSBuild Projects="NumbersEnumerator\NumbersEnumerator.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="NumbersEnumerator:Make">
+        <MSBuild Projects="NumbersEnumerator\NumbersEnumerator.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="VarProp">
+        <MSBuild Projects="VarProp\VarProp.dproj"/>
+    </Target>
+    <Target Name="VarProp:Clean">
+        <MSBuild Projects="VarProp\VarProp.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="VarProp:Make">
+        <MSBuild Projects="VarProp\VarProp.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="AutoRTTI;DateCompTest;DatePackage;DynamicEvents;FormProperties;NumbersEnumerator;VarProp"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="AutoRTTI:Clean;DateCompTest:Clean;DatePackage:Clean;DynamicEvents:Clean;FormProperties:Clean;NumbersEnumerator:Clean;VarProp:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="AutoRTTI:Make;DateCompTest:Make;DatePackage:Make;DynamicEvents:Make;FormProperties:Make;NumbersEnumerator:Make;VarProp:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

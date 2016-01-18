@@ -1,0 +1,21 @@
+object FormDynamic: TFormDynamic
+  Left = 0
+  Top = 0
+  Caption = 'DynamicEvents'
+  ClientHeight = 567
+  ClientWidth = 384
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnMouseDown = FormMouseDown
+  DesignerMasterStyle = 3
+  object btnTest: TButton
+    Align = Top
+    Size.Width = 384.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    Text = 'Test'
+    OnClick = btnTestClick
+  end
+end

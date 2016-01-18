@@ -1,0 +1,108 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{E3E99B94-6A70-4723-BDEA-8A4D4B4F621D}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Animals1\Animals1.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Animals2\Animals2.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Animals3\Animals3.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="DerivedDates\DerivedDates.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Protection\Protection.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ReintroduceTest\ReintroduceTest.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="VirtualInheritTest\VirtualInheritTest.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Animals1">
+        <MSBuild Projects="Animals1\Animals1.dproj"/>
+    </Target>
+    <Target Name="Animals1:Clean">
+        <MSBuild Projects="Animals1\Animals1.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Animals1:Make">
+        <MSBuild Projects="Animals1\Animals1.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Animals2">
+        <MSBuild Projects="Animals2\Animals2.dproj"/>
+    </Target>
+    <Target Name="Animals2:Clean">
+        <MSBuild Projects="Animals2\Animals2.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Animals2:Make">
+        <MSBuild Projects="Animals2\Animals2.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Animals3">
+        <MSBuild Projects="Animals3\Animals3.dproj"/>
+    </Target>
+    <Target Name="Animals3:Clean">
+        <MSBuild Projects="Animals3\Animals3.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Animals3:Make">
+        <MSBuild Projects="Animals3\Animals3.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="DerivedDates">
+        <MSBuild Projects="DerivedDates\DerivedDates.dproj"/>
+    </Target>
+    <Target Name="DerivedDates:Clean">
+        <MSBuild Projects="DerivedDates\DerivedDates.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DerivedDates:Make">
+        <MSBuild Projects="DerivedDates\DerivedDates.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Protection">
+        <MSBuild Projects="Protection\Protection.dproj"/>
+    </Target>
+    <Target Name="Protection:Clean">
+        <MSBuild Projects="Protection\Protection.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Protection:Make">
+        <MSBuild Projects="Protection\Protection.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ReintroduceTest">
+        <MSBuild Projects="ReintroduceTest\ReintroduceTest.dproj"/>
+    </Target>
+    <Target Name="ReintroduceTest:Clean">
+        <MSBuild Projects="ReintroduceTest\ReintroduceTest.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ReintroduceTest:Make">
+        <MSBuild Projects="ReintroduceTest\ReintroduceTest.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="VirtualInheritTest">
+        <MSBuild Projects="VirtualInheritTest\VirtualInheritTest.dproj"/>
+    </Target>
+    <Target Name="VirtualInheritTest:Clean">
+        <MSBuild Projects="VirtualInheritTest\VirtualInheritTest.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="VirtualInheritTest:Make">
+        <MSBuild Projects="VirtualInheritTest\VirtualInheritTest.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Animals1;Animals2;Animals3;DerivedDates;Protection;ReintroduceTest;VirtualInheritTest"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Animals1:Clean;Animals2:Clean;Animals3:Clean;DerivedDates:Clean;Protection:Clean;ReintroduceTest:Clean;VirtualInheritTest:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Animals1:Make;Animals2:Make;Animals3:Make;DerivedDates:Make;Protection:Make;ReintroduceTest:Make;VirtualInheritTest:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

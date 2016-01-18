@@ -1,0 +1,120 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{35E1D96B-C599-4CF1-96FE-70593F90F565}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="ClicksCount\ClicksCount.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="CreateComps\CreateComps.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Dates1\Dates1.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Dates2\Dates2.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Dates3\Dates3.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Dates4\Dates4.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="NestedTypes\NestedTypes.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ViewDates\ViewDates.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="ClicksCount">
+        <MSBuild Projects="ClicksCount\ClicksCount.dproj"/>
+    </Target>
+    <Target Name="ClicksCount:Clean">
+        <MSBuild Projects="ClicksCount\ClicksCount.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ClicksCount:Make">
+        <MSBuild Projects="ClicksCount\ClicksCount.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="CreateComps">
+        <MSBuild Projects="CreateComps\CreateComps.dproj"/>
+    </Target>
+    <Target Name="CreateComps:Clean">
+        <MSBuild Projects="CreateComps\CreateComps.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="CreateComps:Make">
+        <MSBuild Projects="CreateComps\CreateComps.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Dates1">
+        <MSBuild Projects="Dates1\Dates1.dproj"/>
+    </Target>
+    <Target Name="Dates1:Clean">
+        <MSBuild Projects="Dates1\Dates1.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Dates1:Make">
+        <MSBuild Projects="Dates1\Dates1.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Dates2">
+        <MSBuild Projects="Dates2\Dates2.dproj"/>
+    </Target>
+    <Target Name="Dates2:Clean">
+        <MSBuild Projects="Dates2\Dates2.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Dates2:Make">
+        <MSBuild Projects="Dates2\Dates2.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Dates3">
+        <MSBuild Projects="Dates3\Dates3.dproj"/>
+    </Target>
+    <Target Name="Dates3:Clean">
+        <MSBuild Projects="Dates3\Dates3.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Dates3:Make">
+        <MSBuild Projects="Dates3\Dates3.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Dates4">
+        <MSBuild Projects="Dates4\Dates4.dproj"/>
+    </Target>
+    <Target Name="Dates4:Clean">
+        <MSBuild Projects="Dates4\Dates4.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Dates4:Make">
+        <MSBuild Projects="Dates4\Dates4.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="NestedTypes">
+        <MSBuild Projects="NestedTypes\NestedTypes.dproj"/>
+    </Target>
+    <Target Name="NestedTypes:Clean">
+        <MSBuild Projects="NestedTypes\NestedTypes.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="NestedTypes:Make">
+        <MSBuild Projects="NestedTypes\NestedTypes.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ViewDates">
+        <MSBuild Projects="ViewDates\ViewDates.dproj"/>
+    </Target>
+    <Target Name="ViewDates:Clean">
+        <MSBuild Projects="ViewDates\ViewDates.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ViewDates:Make">
+        <MSBuild Projects="ViewDates\ViewDates.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="ClicksCount;CreateComps;Dates1;Dates2;Dates3;Dates4;NestedTypes;ViewDates"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="ClicksCount:Clean;CreateComps:Clean;Dates1:Clean;Dates2:Clean;Dates3:Clean;Dates4:Clean;NestedTypes:Clean;ViewDates:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="ClicksCount:Make;CreateComps:Make;Dates1:Make;Dates2:Make;Dates3:Make;Dates4:Make;NestedTypes:Make;ViewDates:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

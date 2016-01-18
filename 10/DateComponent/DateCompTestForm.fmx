@@ -1,0 +1,40 @@
+object FormDate: TFormDate
+  Left = 0
+  Top = 0
+  Caption = 'DateComponent'
+  ClientHeight = 567
+  ClientWidth = 384
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 3
+  object btnInc: TButton
+    Align = Top
+    Size.Width = 384.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    Text = 'Increase'
+    OnClick = btnIncClick
+  end
+  object Label1: TLabel
+    Align = Top
+    StyledSettings = [Family, Style, FontColor]
+    Position.Y = 44.000000000000000000
+    Size.Width = 384.000000000000000000
+    Size.Height = 23.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 16.000000000000000000
+    TextSettings.HorzAlign = Center
+    Text = 'Label1'
+  end
+  object Date1: TDate
+    Day = 14
+    Month = 11
+    Year = 2014
+    OnChange = Date1Change
+    Left = 80
+    Top = 112
+  end
+end
