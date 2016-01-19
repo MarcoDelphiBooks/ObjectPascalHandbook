@@ -1,0 +1,120 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{F3BBE237-D207-480F-8556-A81B9999133C}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="DescriptionAttribute_VCL\DescriptionAttribute.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="InterceptBaseClass_VCL\InterceptBaseClass.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="RttiAccess\RttiAccess.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="RttiAttrib_VCL\RttiAttrib.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="RttiIntro_VCL\RttiIntro.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="TValueTest_VCL\TValueTest.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="TypesList\TypesList.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="XmlPersist_VCL\XmlPersist.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="DescriptionAttribute">
+        <MSBuild Projects="DescriptionAttribute_VCL\DescriptionAttribute.dproj"/>
+    </Target>
+    <Target Name="DescriptionAttribute:Clean">
+        <MSBuild Projects="DescriptionAttribute_VCL\DescriptionAttribute.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DescriptionAttribute:Make">
+        <MSBuild Projects="DescriptionAttribute_VCL\DescriptionAttribute.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="InterceptBaseClass">
+        <MSBuild Projects="InterceptBaseClass_VCL\InterceptBaseClass.dproj"/>
+    </Target>
+    <Target Name="InterceptBaseClass:Clean">
+        <MSBuild Projects="InterceptBaseClass_VCL\InterceptBaseClass.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="InterceptBaseClass:Make">
+        <MSBuild Projects="InterceptBaseClass_VCL\InterceptBaseClass.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="RttiAccess">
+        <MSBuild Projects="RttiAccess\RttiAccess.dproj"/>
+    </Target>
+    <Target Name="RttiAccess:Clean">
+        <MSBuild Projects="RttiAccess\RttiAccess.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="RttiAccess:Make">
+        <MSBuild Projects="RttiAccess\RttiAccess.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="RttiAttrib">
+        <MSBuild Projects="RttiAttrib_VCL\RttiAttrib.dproj"/>
+    </Target>
+    <Target Name="RttiAttrib:Clean">
+        <MSBuild Projects="RttiAttrib_VCL\RttiAttrib.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="RttiAttrib:Make">
+        <MSBuild Projects="RttiAttrib_VCL\RttiAttrib.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="RttiIntro">
+        <MSBuild Projects="RttiIntro_VCL\RttiIntro.dproj"/>
+    </Target>
+    <Target Name="RttiIntro:Clean">
+        <MSBuild Projects="RttiIntro_VCL\RttiIntro.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="RttiIntro:Make">
+        <MSBuild Projects="RttiIntro_VCL\RttiIntro.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="TValueTest">
+        <MSBuild Projects="TValueTest_VCL\TValueTest.dproj"/>
+    </Target>
+    <Target Name="TValueTest:Clean">
+        <MSBuild Projects="TValueTest_VCL\TValueTest.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TValueTest:Make">
+        <MSBuild Projects="TValueTest_VCL\TValueTest.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="TypesList">
+        <MSBuild Projects="TypesList\TypesList.dproj"/>
+    </Target>
+    <Target Name="TypesList:Clean">
+        <MSBuild Projects="TypesList\TypesList.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TypesList:Make">
+        <MSBuild Projects="TypesList\TypesList.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="XmlPersist">
+        <MSBuild Projects="XmlPersist_VCL\XmlPersist.dproj"/>
+    </Target>
+    <Target Name="XmlPersist:Clean">
+        <MSBuild Projects="XmlPersist_VCL\XmlPersist.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="XmlPersist:Make">
+        <MSBuild Projects="XmlPersist_VCL\XmlPersist.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="DescriptionAttribute;InterceptBaseClass;RttiAccess;RttiAttrib;RttiIntro;TValueTest;TypesList;XmlPersist"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="DescriptionAttribute:Clean;InterceptBaseClass:Clean;RttiAccess:Clean;RttiAttrib:Clean;RttiIntro:Clean;TValueTest:Clean;TypesList:Clean;XmlPersist:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="DescriptionAttribute:Make;InterceptBaseClass:Make;RttiAccess:Make;RttiAttrib:Make;RttiIntro:Make;TValueTest:Make;TypesList:Make;XmlPersist:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

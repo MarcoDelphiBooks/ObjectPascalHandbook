@@ -1,0 +1,36 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'ShowMemory'
+  ClientHeight = 567
+  ClientWidth = 384
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 3
+  object Button1: TButton
+    Align = Top
+    Size.Width = 384.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    Text = 'Get Memory Data'
+    OnClick = Button1Click
+  end
+  object AniIndicator1: TAniIndicator
+    Position.X = 168.000000000000000000
+    Position.Y = 256.000000000000000000
+    Visible = False
+  end
+  object Image2: TImage
+    MultiResBitmap.Height = 256
+    MultiResBitmap.Width = 256
+    MultiResBitmap = <
+      item
+      end>
+    Align = Client
+    Size.Width = 384.000000000000000000
+    Size.Height = 523.000000000000000000
+    Size.PlatformDefault = False
+  end
+end

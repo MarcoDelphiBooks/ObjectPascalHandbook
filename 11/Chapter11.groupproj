@@ -1,0 +1,84 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{BC4EAFEB-7854-44A0-988F-6C7AD3F57526}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="AdapterIntf_VCL\Adapter_Demo.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Intf101\Intf101.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="IntfDemo\IntfDemo.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="IntfError\IntfError.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ObjFromIntf_VCL\ObjFromIntf.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Adapter_Demo">
+        <MSBuild Projects="AdapterIntf_VCL\Adapter_Demo.dproj"/>
+    </Target>
+    <Target Name="Adapter_Demo:Clean">
+        <MSBuild Projects="AdapterIntf_VCL\Adapter_Demo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Adapter_Demo:Make">
+        <MSBuild Projects="AdapterIntf_VCL\Adapter_Demo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Intf101">
+        <MSBuild Projects="Intf101\Intf101.dproj"/>
+    </Target>
+    <Target Name="Intf101:Clean">
+        <MSBuild Projects="Intf101\Intf101.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Intf101:Make">
+        <MSBuild Projects="Intf101\Intf101.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="IntfDemo">
+        <MSBuild Projects="IntfDemo\IntfDemo.dproj"/>
+    </Target>
+    <Target Name="IntfDemo:Clean">
+        <MSBuild Projects="IntfDemo\IntfDemo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="IntfDemo:Make">
+        <MSBuild Projects="IntfDemo\IntfDemo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="IntfError">
+        <MSBuild Projects="IntfError\IntfError.dproj"/>
+    </Target>
+    <Target Name="IntfError:Clean">
+        <MSBuild Projects="IntfError\IntfError.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="IntfError:Make">
+        <MSBuild Projects="IntfError\IntfError.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ObjFromIntf">
+        <MSBuild Projects="ObjFromIntf_VCL\ObjFromIntf.dproj"/>
+    </Target>
+    <Target Name="ObjFromIntf:Clean">
+        <MSBuild Projects="ObjFromIntf_VCL\ObjFromIntf.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ObjFromIntf:Make">
+        <MSBuild Projects="ObjFromIntf_VCL\ObjFromIntf.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Adapter_Demo;Intf101;IntfDemo;IntfError;ObjFromIntf"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Adapter_Demo:Clean;Intf101:Clean;IntfDemo:Clean;IntfError:Clean;ObjFromIntf:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Adapter_Demo:Make;Intf101:Make;IntfDemo:Make;IntfError:Make;ObjFromIntf:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

@@ -1,0 +1,58 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'ClassRef'
+  ClientHeight = 567
+  ClientWidth = 384
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 3
+  object GroupBox1: TGroupBox
+    Align = MostTop
+    Size.Width = 384.000000000000000000
+    Size.Height = 70.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Select class'
+    TabOrder = 0
+    object RadioButtonButton: TRadioButton
+      Align = Left
+      IsChecked = True
+      Size.Width = 120.000000000000000000
+      Size.Height = 70.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Btn'
+      OnChange = RadioButtonButtonChange
+    end
+    object RadioButtonRadio: TRadioButton
+      Align = Client
+      Size.Width = 144.000000000000000000
+      Size.Height = 70.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'Radio'
+      OnChange = RadioButtonRadioChange
+    end
+    object RadioButtonEdit: TRadioButton
+      Align = Right
+      Position.X = 264.000000000000000000
+      Size.Width = 120.000000000000000000
+      Size.Height = 70.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Text = 'Edit'
+      OnChange = RadioButtonEditChange
+    end
+  end
+  object Layout1: TLayout
+    Align = Client
+    HitTest = True
+    Size.Width = 384.000000000000000000
+    Size.Height = 497.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    OnMouseDown = Layout1MouseDown
+  end
+end

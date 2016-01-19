@@ -1,0 +1,120 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{A3D83367-2C22-4B91-AE2A-4932A7550E95}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="ClassCtor_VCL\ClassCtor.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ClassHelpers_VCL\Classhelpers.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ClassRef\ClassRef.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ClassStatic_VCL\ClassStatic.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ControlHelper\ControlHelper.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="RecordHelpers_VCL\RecordHelpers.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="StaticCallBack_VCL\StaticCallBack.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="TypeAliasHelper\TypeAliasHelper.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="ClassCtor">
+        <MSBuild Projects="ClassCtor_VCL\ClassCtor.dproj"/>
+    </Target>
+    <Target Name="ClassCtor:Clean">
+        <MSBuild Projects="ClassCtor_VCL\ClassCtor.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ClassCtor:Make">
+        <MSBuild Projects="ClassCtor_VCL\ClassCtor.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Classhelpers">
+        <MSBuild Projects="ClassHelpers_VCL\Classhelpers.dproj"/>
+    </Target>
+    <Target Name="Classhelpers:Clean">
+        <MSBuild Projects="ClassHelpers_VCL\Classhelpers.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Classhelpers:Make">
+        <MSBuild Projects="ClassHelpers_VCL\Classhelpers.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ClassRef">
+        <MSBuild Projects="ClassRef\ClassRef.dproj"/>
+    </Target>
+    <Target Name="ClassRef:Clean">
+        <MSBuild Projects="ClassRef\ClassRef.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ClassRef:Make">
+        <MSBuild Projects="ClassRef\ClassRef.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ClassStatic">
+        <MSBuild Projects="ClassStatic_VCL\ClassStatic.dproj"/>
+    </Target>
+    <Target Name="ClassStatic:Clean">
+        <MSBuild Projects="ClassStatic_VCL\ClassStatic.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ClassStatic:Make">
+        <MSBuild Projects="ClassStatic_VCL\ClassStatic.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ControlHelper">
+        <MSBuild Projects="ControlHelper\ControlHelper.dproj"/>
+    </Target>
+    <Target Name="ControlHelper:Clean">
+        <MSBuild Projects="ControlHelper\ControlHelper.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ControlHelper:Make">
+        <MSBuild Projects="ControlHelper\ControlHelper.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="RecordHelpers">
+        <MSBuild Projects="RecordHelpers_VCL\RecordHelpers.dproj"/>
+    </Target>
+    <Target Name="RecordHelpers:Clean">
+        <MSBuild Projects="RecordHelpers_VCL\RecordHelpers.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="RecordHelpers:Make">
+        <MSBuild Projects="RecordHelpers_VCL\RecordHelpers.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="StaticCallBack">
+        <MSBuild Projects="StaticCallBack_VCL\StaticCallBack.dproj"/>
+    </Target>
+    <Target Name="StaticCallBack:Clean">
+        <MSBuild Projects="StaticCallBack_VCL\StaticCallBack.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="StaticCallBack:Make">
+        <MSBuild Projects="StaticCallBack_VCL\StaticCallBack.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="TypeAliasHelper">
+        <MSBuild Projects="TypeAliasHelper\TypeAliasHelper.dproj"/>
+    </Target>
+    <Target Name="TypeAliasHelper:Clean">
+        <MSBuild Projects="TypeAliasHelper\TypeAliasHelper.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TypeAliasHelper:Make">
+        <MSBuild Projects="TypeAliasHelper\TypeAliasHelper.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="ClassCtor;Classhelpers;ClassRef;ClassStatic;ControlHelper;RecordHelpers;StaticCallBack;TypeAliasHelper"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="ClassCtor:Clean;Classhelpers:Clean;ClassRef:Clean;ClassStatic:Clean;ControlHelper:Clean;RecordHelpers:Clean;StaticCallBack:Clean;TypeAliasHelper:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="ClassCtor:Make;Classhelpers:Make;ClassRef:Make;ClassStatic:Make;ControlHelper:Make;RecordHelpers:Make;StaticCallBack:Make;TypeAliasHelper:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

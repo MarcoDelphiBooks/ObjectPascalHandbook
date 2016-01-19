@@ -1,0 +1,84 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{C42638D6-B599-4DE0-8E5D-F922E0DC8AA4}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="ArcExperiments\ArcExperiments.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="FastMMCode_VCL\FastMMCode.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="LeakTest_VCL\LeakTest.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="SafeCode_VCL\SafeCode.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ShowMemory\ShowMemory.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="ArcExperiments">
+        <MSBuild Projects="ArcExperiments\ArcExperiments.dproj"/>
+    </Target>
+    <Target Name="ArcExperiments:Clean">
+        <MSBuild Projects="ArcExperiments\ArcExperiments.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ArcExperiments:Make">
+        <MSBuild Projects="ArcExperiments\ArcExperiments.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="FastMMCode">
+        <MSBuild Projects="FastMMCode_VCL\FastMMCode.dproj"/>
+    </Target>
+    <Target Name="FastMMCode:Clean">
+        <MSBuild Projects="FastMMCode_VCL\FastMMCode.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="FastMMCode:Make">
+        <MSBuild Projects="FastMMCode_VCL\FastMMCode.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="LeakTest">
+        <MSBuild Projects="LeakTest_VCL\LeakTest.dproj"/>
+    </Target>
+    <Target Name="LeakTest:Clean">
+        <MSBuild Projects="LeakTest_VCL\LeakTest.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="LeakTest:Make">
+        <MSBuild Projects="LeakTest_VCL\LeakTest.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SafeCode">
+        <MSBuild Projects="SafeCode_VCL\SafeCode.dproj"/>
+    </Target>
+    <Target Name="SafeCode:Clean">
+        <MSBuild Projects="SafeCode_VCL\SafeCode.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SafeCode:Make">
+        <MSBuild Projects="SafeCode_VCL\SafeCode.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ShowMemory">
+        <MSBuild Projects="ShowMemory\ShowMemory.dproj"/>
+    </Target>
+    <Target Name="ShowMemory:Clean">
+        <MSBuild Projects="ShowMemory\ShowMemory.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ShowMemory:Make">
+        <MSBuild Projects="ShowMemory\ShowMemory.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="ArcExperiments;FastMMCode;LeakTest;SafeCode;ShowMemory"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="ArcExperiments:Clean;FastMMCode:Clean;LeakTest:Clean;SafeCode:Clean;ShowMemory:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="ArcExperiments:Make;FastMMCode:Make;LeakTest:Make;SafeCode:Make;ShowMemory:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

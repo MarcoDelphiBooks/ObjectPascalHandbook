@@ -1,0 +1,84 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{FAA13930-012E-45A5-B6F4-F70593167127}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="AnonAjax_VCL\AnonAjax.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="AnonButton\AnonButton.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="AnonLargeString\AnonLargeString.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="AnonymFirst_VCL\AnonymFirst.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="WebFind_VCL\WebFind.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="AnonAjax">
+        <MSBuild Projects="AnonAjax_VCL\AnonAjax.dproj"/>
+    </Target>
+    <Target Name="AnonAjax:Clean">
+        <MSBuild Projects="AnonAjax_VCL\AnonAjax.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="AnonAjax:Make">
+        <MSBuild Projects="AnonAjax_VCL\AnonAjax.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="AnonButton">
+        <MSBuild Projects="AnonButton\AnonButton.dproj"/>
+    </Target>
+    <Target Name="AnonButton:Clean">
+        <MSBuild Projects="AnonButton\AnonButton.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="AnonButton:Make">
+        <MSBuild Projects="AnonButton\AnonButton.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="AnonLargeString">
+        <MSBuild Projects="AnonLargeString\AnonLargeString.dproj"/>
+    </Target>
+    <Target Name="AnonLargeString:Clean">
+        <MSBuild Projects="AnonLargeString\AnonLargeString.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="AnonLargeString:Make">
+        <MSBuild Projects="AnonLargeString\AnonLargeString.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="AnonymFirst">
+        <MSBuild Projects="AnonymFirst_VCL\AnonymFirst.dproj"/>
+    </Target>
+    <Target Name="AnonymFirst:Clean">
+        <MSBuild Projects="AnonymFirst_VCL\AnonymFirst.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="AnonymFirst:Make">
+        <MSBuild Projects="AnonymFirst_VCL\AnonymFirst.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="WebFind">
+        <MSBuild Projects="WebFind_VCL\WebFind.dproj"/>
+    </Target>
+    <Target Name="WebFind:Clean">
+        <MSBuild Projects="WebFind_VCL\WebFind.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="WebFind:Make">
+        <MSBuild Projects="WebFind_VCL\WebFind.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="AnonAjax;AnonButton;AnonLargeString;AnonymFirst;WebFind"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="AnonAjax:Clean;AnonButton:Clean;AnonLargeString:Clean;AnonymFirst:Clean;WebFind:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="AnonAjax:Make;AnonButton:Make;AnonLargeString:Make;AnonymFirst:Make;WebFind:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

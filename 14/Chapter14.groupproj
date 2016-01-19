@@ -1,0 +1,192 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{C42638D6-B599-4DE0-8E5D-F922E0DC8AA4}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="ClassConstraint_VCL\ClassConstraint.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="CovariantReturnTypes_VCL\Covariant.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="CustomerDictionary_VCL\CustomerDictionary.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="GenericClassCtor_VCL\GenericClassCtor.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="GenericInterface_VCL\GenericInterface.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="GenericMethod\GenericMethod.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="GenericTypeFunc_VCL\GenericTypeFunc.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="IntfConstraint_VCL\IntfConstraint.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="KeyValueClassic_VCL\KeyValueClassic.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="KeyValueGeneric_VCL\KeyValueGeneric.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ListDemoMD2005_VCL\ListDemoMd2005.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="SmartPointers_VCL\SmartPointers.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="StringListVsDictionary_VCL\StringListVsDictionary.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="TypeCompRules_VCL\TypeCompRules.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="ClassConstraint">
+        <MSBuild Projects="ClassConstraint_VCL\ClassConstraint.dproj"/>
+    </Target>
+    <Target Name="ClassConstraint:Clean">
+        <MSBuild Projects="ClassConstraint_VCL\ClassConstraint.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ClassConstraint:Make">
+        <MSBuild Projects="ClassConstraint_VCL\ClassConstraint.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Covariant">
+        <MSBuild Projects="CovariantReturnTypes_VCL\Covariant.dproj"/>
+    </Target>
+    <Target Name="Covariant:Clean">
+        <MSBuild Projects="CovariantReturnTypes_VCL\Covariant.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Covariant:Make">
+        <MSBuild Projects="CovariantReturnTypes_VCL\Covariant.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="CustomerDictionary">
+        <MSBuild Projects="CustomerDictionary_VCL\CustomerDictionary.dproj"/>
+    </Target>
+    <Target Name="CustomerDictionary:Clean">
+        <MSBuild Projects="CustomerDictionary_VCL\CustomerDictionary.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="CustomerDictionary:Make">
+        <MSBuild Projects="CustomerDictionary_VCL\CustomerDictionary.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="GenericClassCtor">
+        <MSBuild Projects="GenericClassCtor_VCL\GenericClassCtor.dproj"/>
+    </Target>
+    <Target Name="GenericClassCtor:Clean">
+        <MSBuild Projects="GenericClassCtor_VCL\GenericClassCtor.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="GenericClassCtor:Make">
+        <MSBuild Projects="GenericClassCtor_VCL\GenericClassCtor.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="GenericInterface">
+        <MSBuild Projects="GenericInterface_VCL\GenericInterface.dproj"/>
+    </Target>
+    <Target Name="GenericInterface:Clean">
+        <MSBuild Projects="GenericInterface_VCL\GenericInterface.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="GenericInterface:Make">
+        <MSBuild Projects="GenericInterface_VCL\GenericInterface.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="GenericMethod">
+        <MSBuild Projects="GenericMethod\GenericMethod.dproj"/>
+    </Target>
+    <Target Name="GenericMethod:Clean">
+        <MSBuild Projects="GenericMethod\GenericMethod.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="GenericMethod:Make">
+        <MSBuild Projects="GenericMethod\GenericMethod.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="GenericTypeFunc">
+        <MSBuild Projects="GenericTypeFunc_VCL\GenericTypeFunc.dproj"/>
+    </Target>
+    <Target Name="GenericTypeFunc:Clean">
+        <MSBuild Projects="GenericTypeFunc_VCL\GenericTypeFunc.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="GenericTypeFunc:Make">
+        <MSBuild Projects="GenericTypeFunc_VCL\GenericTypeFunc.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="IntfConstraint">
+        <MSBuild Projects="IntfConstraint_VCL\IntfConstraint.dproj"/>
+    </Target>
+    <Target Name="IntfConstraint:Clean">
+        <MSBuild Projects="IntfConstraint_VCL\IntfConstraint.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="IntfConstraint:Make">
+        <MSBuild Projects="IntfConstraint_VCL\IntfConstraint.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="KeyValueClassic">
+        <MSBuild Projects="KeyValueClassic_VCL\KeyValueClassic.dproj"/>
+    </Target>
+    <Target Name="KeyValueClassic:Clean">
+        <MSBuild Projects="KeyValueClassic_VCL\KeyValueClassic.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="KeyValueClassic:Make">
+        <MSBuild Projects="KeyValueClassic_VCL\KeyValueClassic.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="KeyValueGeneric">
+        <MSBuild Projects="KeyValueGeneric_VCL\KeyValueGeneric.dproj"/>
+    </Target>
+    <Target Name="KeyValueGeneric:Clean">
+        <MSBuild Projects="KeyValueGeneric_VCL\KeyValueGeneric.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="KeyValueGeneric:Make">
+        <MSBuild Projects="KeyValueGeneric_VCL\KeyValueGeneric.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ListDemoMd2005">
+        <MSBuild Projects="ListDemoMD2005_VCL\ListDemoMd2005.dproj"/>
+    </Target>
+    <Target Name="ListDemoMd2005:Clean">
+        <MSBuild Projects="ListDemoMD2005_VCL\ListDemoMd2005.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ListDemoMd2005:Make">
+        <MSBuild Projects="ListDemoMD2005_VCL\ListDemoMd2005.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SmartPointers">
+        <MSBuild Projects="SmartPointers_VCL\SmartPointers.dproj"/>
+    </Target>
+    <Target Name="SmartPointers:Clean">
+        <MSBuild Projects="SmartPointers_VCL\SmartPointers.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SmartPointers:Make">
+        <MSBuild Projects="SmartPointers_VCL\SmartPointers.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="StringListVsDictionary">
+        <MSBuild Projects="StringListVsDictionary_VCL\StringListVsDictionary.dproj"/>
+    </Target>
+    <Target Name="StringListVsDictionary:Clean">
+        <MSBuild Projects="StringListVsDictionary_VCL\StringListVsDictionary.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="StringListVsDictionary:Make">
+        <MSBuild Projects="StringListVsDictionary_VCL\StringListVsDictionary.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="TypeCompRules">
+        <MSBuild Projects="TypeCompRules_VCL\TypeCompRules.dproj"/>
+    </Target>
+    <Target Name="TypeCompRules:Clean">
+        <MSBuild Projects="TypeCompRules_VCL\TypeCompRules.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TypeCompRules:Make">
+        <MSBuild Projects="TypeCompRules_VCL\TypeCompRules.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="ClassConstraint;Covariant;CustomerDictionary;GenericClassCtor;GenericInterface;GenericMethod;GenericTypeFunc;IntfConstraint;KeyValueClassic;KeyValueGeneric;ListDemoMd2005;SmartPointers;StringListVsDictionary;TypeCompRules"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="ClassConstraint:Clean;Covariant:Clean;CustomerDictionary:Clean;GenericClassCtor:Clean;GenericInterface:Clean;GenericMethod:Clean;GenericTypeFunc:Clean;IntfConstraint:Clean;KeyValueClassic:Clean;KeyValueGeneric:Clean;ListDemoMd2005:Clean;SmartPointers:Clean;StringListVsDictionary:Clean;TypeCompRules:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="ClassConstraint:Make;Covariant:Make;CustomerDictionary:Make;GenericClassCtor:Make;GenericInterface:Make;GenericMethod:Make;GenericTypeFunc:Make;IntfConstraint:Make;KeyValueClassic:Make;KeyValueGeneric:Make;ListDemoMd2005:Make;SmartPointers:Make;StringListVsDictionary:Make;TypeCompRules:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

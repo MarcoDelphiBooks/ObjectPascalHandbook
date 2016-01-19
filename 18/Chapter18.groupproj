@@ -1,0 +1,72 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{284968E9-E74C-40BB-AB84-D7506C2C0E43}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="BinaryFiles_VCL\BinaryFiles.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="IoFilesInFolder_VCL\IoFilesInFolder.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ReaderWriter_VCL\ReaderWriter.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="StringBuilderDemo_VCL\StringBuilderDemo.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="BinaryFiles">
+        <MSBuild Projects="BinaryFiles_VCL\BinaryFiles.dproj"/>
+    </Target>
+    <Target Name="BinaryFiles:Clean">
+        <MSBuild Projects="BinaryFiles_VCL\BinaryFiles.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="BinaryFiles:Make">
+        <MSBuild Projects="BinaryFiles_VCL\BinaryFiles.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="IoFilesInFolder">
+        <MSBuild Projects="IoFilesInFolder_VCL\IoFilesInFolder.dproj"/>
+    </Target>
+    <Target Name="IoFilesInFolder:Clean">
+        <MSBuild Projects="IoFilesInFolder_VCL\IoFilesInFolder.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="IoFilesInFolder:Make">
+        <MSBuild Projects="IoFilesInFolder_VCL\IoFilesInFolder.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ReaderWriter">
+        <MSBuild Projects="ReaderWriter_VCL\ReaderWriter.dproj"/>
+    </Target>
+    <Target Name="ReaderWriter:Clean">
+        <MSBuild Projects="ReaderWriter_VCL\ReaderWriter.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ReaderWriter:Make">
+        <MSBuild Projects="ReaderWriter_VCL\ReaderWriter.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="StringBuilderDemo">
+        <MSBuild Projects="StringBuilderDemo_VCL\StringBuilderDemo.dproj"/>
+    </Target>
+    <Target Name="StringBuilderDemo:Clean">
+        <MSBuild Projects="StringBuilderDemo_VCL\StringBuilderDemo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="StringBuilderDemo:Make">
+        <MSBuild Projects="StringBuilderDemo_VCL\StringBuilderDemo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="BinaryFiles;IoFilesInFolder;ReaderWriter;StringBuilderDemo"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="BinaryFiles:Clean;IoFilesInFolder:Clean;ReaderWriter:Clean;StringBuilderDemo:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="BinaryFiles:Make;IoFilesInFolder:Make;ReaderWriter:Make;StringBuilderDemo:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
